@@ -148,7 +148,7 @@ def generate_mrn() -> str:
 async def root():
     """Root endpoint"""
     return {
-        "message": "Healthcare Patient Management System API",
+        "message": "Healthcare Patient Management System API-Test",
         "version": "1.0.0",
         "docs": "/api/docs"
     }
