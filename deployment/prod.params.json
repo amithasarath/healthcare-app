@@ -1,0 +1,46 @@
+[
+  {
+    "ParameterKey": "AppName",
+    "ParameterValue": "healthcare"
+  },
+  {
+    "ParameterKey": "Environment",
+    "ParameterValue": "prod"
+  },
+  {
+    "ParameterKey": "ContainerPort",
+    "ParameterValue": "8000"
+  },
+  {
+    "ParameterKey": "DBPassword",
+    "ParameterValue": "CHANGE_ME_USE_STRONG_PASSWORD"
+  },
+  {
+    "ParameterKey": "DBName",
+    "ParameterValue": "healthcaredb"
+  },
+  {
+    "ParameterKey": "DBUsername",
+    "ParameterValue": "healthcareapp"
+  },
+  {
+    "ParameterKey": "DefaultVpcId",
+    "ParameterValue": "CHANGE_ME"
+  },
+  {
+    "ParameterKey": "DefaultSubnetId1",
+    "ParameterValue": "CHANGE_ME"
+  },
+  {
+    "ParameterKey": "DefaultSubnetId2",
+    "ParameterValue": "CHANGE_ME"
+  },
+  {
+    "ParameterKey": "GitHubOrg",
+    "ParameterValue": "CHANGE_ME"
+  },
+  {
+    "ParameterKey": "GitHubRepo",
+    "ParameterValue": "healthcare-app"
+  }
+]
