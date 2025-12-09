@@ -36,7 +36,7 @@ jobs:
       - name: Get infrastructure outputs
         id: infra
         run: |
-          STACK_NAME="${{ env.APP_NAME }} "
+          STACK_NAME="${{ env.APP_NAME }}"
 
           ECR_URI=$(aws cloudformation describe-stacks --stack-name $STACK_NAME \
             --query 'Stacks[0].Outputs[?OutputKey==`ECRRepositoryUri`].OutputValue' --output text)
@@ -107,10 +107,12 @@ jobs:
 
       - name: Update ECS service
         run: |
+          # Set desired-count to 1 (stack creates with 0 to avoid chicken-egg problem)
           aws ecs update-service \
             --cluster ${{ steps.infra.outputs.cluster }} \
             --service ${{ steps.infra.outputs.service }} \
             --task-definition ${{ steps.register-task-def.outputs.task_def_arn }} \
+            --desired-count 1 \
             --force-new-deployment
 
       - name: Wait for deployment to complete
