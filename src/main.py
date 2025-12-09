@@ -3,7 +3,7 @@ Healthcare Application - HIPAA-Compliant Patient Management System
 Production-grade FastAPI application with PostgreSQL
 """
 import os
-from datetime import datetime
+from datetime import datetime, date
 from typing import List, Optional
 from contextlib import asynccontextmanager
 
@@ -56,7 +56,7 @@ class PatientBase(BaseModel):
     last_name: str = Field(..., min_length=1, max_length=100)
     email: EmailStr
     phone: Optional[str] = Field(None, max_length=20)
-    date_of_birth: str
+    date_of_birth: date
     gender: Optional[str] = Field(None, max_length=20)
     address: Optional[str] = None
 
